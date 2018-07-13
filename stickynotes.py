@@ -42,7 +42,7 @@ def rot13(string1):
 	intab = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	outtab = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
 	trantab = string1.maketrans(intab, outtab)
-	transs=string1.translate(trantab)
+	transs = string1.translate(trantab)
 	#I can't believe I'm using a rot13 as "encryption", but it'll do with the pickle against plaintext reading at least
 	#Just meant to stop casual people poking around
 	#It'll fall like an airplane doesn't in front of anyone who knows what they're doing, but it's a sticky note program ffs, what encryption do we need really
@@ -230,7 +230,7 @@ def viewprograminfo():
 			contents = enterbox('Describe the bug below', 'Bug Reporting')
 			if contents != None:
 				print('sending email...')
-				sendemail('myprogram3000@gmail.com', ['mnakai.zj9@gmail.com'], [], 'Bug Report from {0}'.format(Username), 'On {0}, {1} reported:\n{2}'.format(pendulum.now(),Username,contents), 'myprogram3000', 'fishdis1')
+				sendemail('myprogram3000@gmail.com', ['mnakai.zj9@gmail.com'], [], 'Bug Report from {0}'.format(Username), 'On {0}, {1} reported:\n\n{2}'.format(pendulum.now(),Username,contents), 'myprogram3000', 'fishdis1')
 				print('email sent')
 			else:
 				print('bug reporting cancelled by user')
@@ -239,7 +239,7 @@ def viewprograminfo():
 
 def viewnotes():
 	print('notes viewer opened')
-	##########################	THIS SHOULD CONTAIN THE STICKYNOTES AND OPTIONS FOR THEM
+	#	//TODO Add note viewer/add note code here
 	pass
 			
 def mainwindow():
